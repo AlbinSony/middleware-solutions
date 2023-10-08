@@ -6,4 +6,10 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.post
+app.post("/submit", (req,res) => {
+    console.log(req.body);
+});
+
+app.listen(port, () => {
+    console.log(`Listening to port ${port}`);
+});
